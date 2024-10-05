@@ -34,7 +34,7 @@ struct Symbols: View {
                     shouldSymbolFill.toggle()
                     name.toggle()
                 }
-            var hellow = "Rickies"
+            let hellow = "Rickies"
             name
             ?
             Text(hellow.lowercased())

@@ -15,6 +15,7 @@ struct Scrolling: View {
                 ScrollImage(image: "bellagio")
                 ScrollImage(image: "stratosphere")
                 ScrollImage(image: "luxor")
+                ScrollImage(image: "paris")
                 ScrollImage(image: "excalibur")
                 ScrollImage(image: "treasureisland")
             }
