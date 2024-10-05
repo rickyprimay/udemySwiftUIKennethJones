@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import MapKit
 
 struct PlaceList: View {
     @Query(sort: \Place.name) private var places: [Place]
@@ -14,6 +15,7 @@ struct PlaceList: View {
     @State private var showImages: Bool = false
     @State private var searchText: String = ""
     @State private var filterByInterested = false
+    @Namespace var namespace
     
     private var predicate: Predicate<Place> {
         #Predicate<Place> {
@@ -32,11 +34,29 @@ struct PlaceList: View {
     var body: some View {
         NavigationStack{
             List((try? places.filter(predicate)) ?? places) { place in
-                PlaceRow(place: place)
+                NavigationLink(value: place) {
+                    PlaceRow(place: place)
+                }
+                .matchedTransitionSource(id: 1, in: namespace)
+                .swipeActions(edge: .leading) {
+                    Button(place.interested ? "Interested" : "Not Interested", systemImage: "star") {
+                        place.interested.toggle()
+                    }
+                    .tint(place.interested ? .yellow: .gray)
+                }
             }
             .navigationTitle("Places")
             .searchable(text: $searchText, prompt: "Find a place")
             .animation(.default, value: searchText)
+            .navigationDestination(for: Place.self) { place in
+                MapView(place: place, position: .camera(MapCamera(
+                    centerCoordinate: place.location,
+                    distance: 1000,
+                    heading: 250,
+                    pitch: 80
+                )))
+                .navigationTransition(.zoom(sourceID: 1, in: namespace))
+            }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Show Images", systemImage: "photo.on.rectangle.fill"){
