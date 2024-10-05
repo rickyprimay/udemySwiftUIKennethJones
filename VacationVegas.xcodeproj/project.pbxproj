@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EA9D57952CB153AD0020120D /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = EA9D57942CB153A50020120D /* readme.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EAA65A7A2CB068FE00966FBF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA9D57942CB153A50020120D /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		EAA65A692CB068FC00966FBF /* VacationVegas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationVegas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA65A792CB068FE00966FBF /* VacationVegasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VacationVegasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA65A832CB068FE00966FBF /* VacationVegasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VacationVegasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +84,7 @@
 				EAA65A7C2CB068FE00966FBF /* VacationVegasTests */,
 				EAA65A862CB068FE00966FBF /* VacationVegasUITests */,
 				EAA65A6A2CB068FC00966FBF /* Products */,
+				EA9D57942CB153A50020120D /* readme.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9D57952CB153AD0020120D /* readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +411,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,6 +441,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
